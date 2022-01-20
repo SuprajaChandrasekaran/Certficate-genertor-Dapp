@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Collect Certificate</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='styles/style.css' />
+  <link rel='stylesheet' href='styles/issueStyle.css' />
+
+  <script>
+    function issueCertificate() {
+      certificateID = document.getElementById("certificateID").value;
+      courseName = document.getElementById("courseName").value;
+      cadndidateName = document.getElementById("cadndidateName").value;
+      grade = document.getElementById("grade").value;
+      date = document.getElementById("date").value;
+      
+      myContract.methods.newCertificate(certificateID, courseName, cadndidateName, grade, date)
+        .send({ from: ethereum.selectedAddress, gasLimit: "927000" }).then((txn) => {
+          console.log(txn);
+          alert("Certificate Issue with Number: " + certificateID);
+        })
+    }
+  </script>
+
+</head>
+
+<body>
+
+  <div class="header">
+    <a href="#default" class="logo">MDNS</a>
+    <div class="header-right">
+      <a href="/">Home</a>
+      <a class="active" href="/issue">Generate Certificate</a>
+    </div>
+  </div>
+
+  <br />
+  <div class="entry-form">
+    <h3>Certificate Details</h3>
+    <div class="form-group">
+      <label for="courseName">Select Course </label>
+      
+      <select class="form-control" name="courseName" id="courseName" >
+        <option>Certified Java Developer </option>
+        <option>Certified Python Developer</option>
+        <option>Certified C# Developer</option>
+        <option>Certified .Net Developer</option>
+        <option>Certified Full Stack Developer</option>
+        <option>Certified Go Developer</option>
+        <option>Certified PHP Developer </option>
+        <option>Certified javascript Developer</option>
+        <option>Certified Swift Developer </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="certificateID">Certificate ID </label>
+      <input type="text" class="form-control" name="certificateID" id="certificateID" placeholder="Enter your Certificate ID"
+        required>
+    </div>
+    <div class="form-group">
+      <label for="cadndidateName">Candidate name </label>
+      <input type="text" class="form-control" name="cadndidateName" id="cadndidateName" placeholder="Enter your Name" required>
+    </div>
+    <div class="form-group">
+      <label for="grade">Select Grade </label>
+      <select class="form-control" id="grade" name="grade" id="grade">
+        <option>O</option>
+        <option>A+</option>
+        <option>A</option>
+        <option>B+</option>
+        <option>B</option>
+        <option>C</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="date">Issue Date </label>
+      <input type="date" class="form-control" id="date" name="date" required>
+    </div>
+
+    <button onclick="issueCertificate()" class="btn btn-info">Collect Certificate </button>
+  </div>
+
+</body>
+
+</html>
