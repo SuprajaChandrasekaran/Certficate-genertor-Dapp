@@ -1,4 +1,4 @@
-# Certificate-Dapp-V2
+# Certficate Generator Dapp
  The application only uses a combination of client side scripting and Metamask wallet
 
 Most of the steps are only reuired when runninig for the first time, please keep that in mind.
