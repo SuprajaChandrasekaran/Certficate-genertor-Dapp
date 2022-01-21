@@ -10,7 +10,7 @@ Before we start we need some tools and dependencies. Please install the followin
 3. Remix ethereum IDE, Link for Remix IDE http://remix.ethereum.org
 
 ## Setting up MetaMask Wallet
-1. Install MetaMask wallet to your Chrome browser https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en,to edge use this link https://microsoftedge.microsoft.com/addons/detail/metamask/ejbalbakoplchlghecdalmeeeajnimhm?hl=en-US.  
+1. Install MetaMask wallet to your Chrome browser https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en , to edge use this link https://microsoftedge.microsoft.com/addons/detail/metamask/ejbalbakoplchlghecdalmeeeajnimhm?hl=en-US.  
 2. Choose Rinkeby Test Network in Metamask and use the faucet to get test ether. 
 3. To collect the ether use this link https://faucets.chain.link/rinkeby.
 
